@@ -2,6 +2,7 @@ package ru.rzn.sbt.javaschool.lesson4.util;
 
 import ru.rzn.sbt.javaschool.lesson4.entity.TextFile;
 
+import java.security.Key;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -9,21 +10,29 @@ import java.util.stream.Stream;
 
 public class CountWords {
 
-    public static void countWordsInFile(List<TextFile> file){
-        List<String> listItem = new ArrayList<>();
+    private Map<String, Integer> result = new HashMap<>();
 
-        for(TextFile item: file){
-            listItem.add(item.getLine());
-        }
+    public void countWordsInFile(List<TextFile> file, String ...params){
+//        if(params == null){return;}
+        List<String> listItem;
 
-        ArrayList<String>[][] result = null;
+        Integer counter;
 
-        for(String w: listItem){
-            String[] word = w.split("\\s+");
-            for (int i = 0; i < word.length; i++) {
-                System.out.println(word[i]);
+        listItem = ToListOfWords.toListOWords(file);
+
+        for (String s: listItem){
+            if(!result.containsKey(s)) {
+                result.put(s, 1);
             }
-
+            else {
+                counter = result.get(s);
+                result.put(s, counter+1);
+            }
+        }
+        for (String key: result.keySet()) {
+            System.out.println(key + " - " + result.get(key));
         }
     }
+
+
 }

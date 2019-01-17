@@ -10,12 +10,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
+        CountWords cw = new CountWords();
         List<TextFile> tx = new ArrayList<>();
 
         LoadFormFile.init(tx);
         System.out.println("---------------- Подсчет слов -------------------");
-        CountWords.countWordsInFile(tx);
+        cw.countWordsInFile(tx);
         System.out.println();
 
         System.out.println("----------------Оригинальный файл-----------------");

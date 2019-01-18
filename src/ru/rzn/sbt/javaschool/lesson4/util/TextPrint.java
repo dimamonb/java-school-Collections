@@ -1,6 +1,7 @@
 package ru.rzn.sbt.javaschool.lesson4.util;
 
 import ru.rzn.sbt.javaschool.lesson4.entity.TextFile;
+import ru.rzn.sbt.javaschool.lesson4.entity.WordsProcessing;
 
 import java.util.*;
 
@@ -20,6 +21,14 @@ public class TextPrint {
         while (lit.hasPrevious()){
             TextFile item = lit.previous();
             System.out.println(item.getPos() + " " + item.getLine());
+        }
+    }
+
+    public static void pirntWords(List<WordsProcessing> words){
+        ListIterator<WordsProcessing> lit = words.listIterator();
+        while (lit.hasNext()){
+            WordsProcessing item = lit.next();
+            System.out.println(item.getWord());
         }
     }
 }

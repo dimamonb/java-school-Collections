@@ -1,6 +1,6 @@
 package ru.rzn.sbt.javaschool.lesson4.entity;
 
-public class TextFile implements Comparable{
+public class TextFile implements Comparable {
     private int pos;
     private String line;
 
@@ -20,8 +20,7 @@ public class TextFile implements Comparable{
 
     @Override
     public int compareTo(Object o) {
-        TextFile txt = (TextFile) o;
-
-        return this.getPos() - txt.getPos();
+        TextFile t = (TextFile) o;
+        return  this.getPos() - t.getPos();
     }
 }

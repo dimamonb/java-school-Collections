@@ -2,11 +2,7 @@ package ru.rzn.sbt.javaschool.lesson4.util;
 
 import ru.rzn.sbt.javaschool.lesson4.entity.TextFile;
 
-import java.security.Key;
 import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class CountWords {
 

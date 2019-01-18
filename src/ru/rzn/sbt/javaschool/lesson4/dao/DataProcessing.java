@@ -4,7 +4,6 @@ package ru.rzn.sbt.javaschool.lesson4.dao;
 import ru.rzn.sbt.javaschool.lesson4.entity.TextFileEntity;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,7 +14,7 @@ import java.util.stream.Stream;
 
 public class DataProcessing {
 
-    public static final String fileName = "ru/rzn/sbt/javaschool/lesson4/file/testfile.txt";
+    public static final String fileName = "/testfile.txt";
 
     public static void init(Collection<TextFileEntity> list) {
 

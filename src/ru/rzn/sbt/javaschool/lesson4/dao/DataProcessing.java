@@ -19,7 +19,7 @@ public class DataProcessing {
     public static void init(Collection<TextFileEntity> list) {
 
         List<String> l = null;
-        try (Stream<String> lines = Files.lines(Paths.get(fileName), Charset.forName("windows-1251"))){
+        try (Stream<String> lines = Files.lines(Paths.get(fileName), Charset.forName("UTF-8"))){
             l = lines.collect(Collectors.toList());
         } catch (IOException e) {
 

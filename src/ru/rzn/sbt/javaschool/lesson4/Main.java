@@ -19,7 +19,6 @@ public class Main {
         st = ToListOfWords1.toListOWords1(tx);
 
 
-
         System.out.println("----------------Оригинальный файл-----------------");
         PirntUtils.pirntForward(tx);
         System.out.println();

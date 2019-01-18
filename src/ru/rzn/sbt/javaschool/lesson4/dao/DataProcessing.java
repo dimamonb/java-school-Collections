@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public class DataProcessing {
 
-    public static final String fileName = "/testfile.txt";
+    public static final String fileName = "src/testfile.txt";
 
     public static void init(Collection<TextFileEntity> list) {
 

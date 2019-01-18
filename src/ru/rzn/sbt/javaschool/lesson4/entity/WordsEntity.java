@@ -1,9 +1,9 @@
 package ru.rzn.sbt.javaschool.lesson4.entity;
 
-public class WordsProcessing implements Comparable<WordsProcessing> {
+public class WordsEntity implements Comparable<WordsEntity> {
     private String word;
 
-    public WordsProcessing(String word){
+    public WordsEntity(String word){
         this.word = word;
     }
 
@@ -17,7 +17,7 @@ public class WordsProcessing implements Comparable<WordsProcessing> {
     }
 
     @Override
-    public int compareTo(WordsProcessing w) {
+    public int compareTo(WordsEntity w) {
         if (word.length() != w.word.length())
             return (word.length() - w.word.length());
         return word.compareTo(w.word);

@@ -1,6 +1,7 @@
 package ru.rzn.sbt.javaschool.lesson4.util;
 
-import ru.rzn.sbt.javaschool.lesson4.entity.TextFile;
+import ru.rzn.sbt.javaschool.lesson4.entity.TextFileEntity;
+import ru.rzn.sbt.javaschool.lesson4.entity.WordsEntity;
 
 import java.util.*;
 
@@ -8,21 +9,21 @@ public class CountWords {
 
     private Map<String, Integer> result = new HashMap<>();
 
-    public void countWordsInFile(List<TextFile> file, String ...params){
+    public void countWordsInFile(List<TextFileEntity> file, String ...params){
 //        if(params == null){return;}
-        List<String> listItem;
+        List<WordsEntity> listItem;
 
         Integer counter;
 
-        listItem = ToListOfWords.toListOWords(file);
+        listItem = ToListOfWords1.toListOWords1(file);
 
-        for (String s: listItem){
-            if(!result.containsKey(s)) {
-                result.put(s, 1);
+        for (WordsEntity s: listItem){
+            if(!result.containsKey(s.getWord())) {
+                result.put(s.getWord(), 1);
             }
             else {
-                counter = result.get(s);
-                result.put(s, counter+1);
+                counter = result.get(s.getWord());
+                result.put(s.getWord(), counter+1);
             }
         }
         for (String key: result.keySet()) {
